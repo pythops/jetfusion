@@ -1,0 +1,56 @@
+#
+# Ruff
+#
+
+[tool.ruff]
+exclude = [
+  ".eggs",
+  ".git",
+  ".mypy_cache",
+  ".pytest_cache",
+  ".ruff_cache",
+  "__pycache__",
+  ".tox",
+  ".venv",
+  "__pypackages__",
+  "build",
+  "dist",
+  "node_modules",
+  ".venv",
+]
+
+extend-select = ["I"]
+line-length = 100
+indent-width = 4
+fix = true
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+#
+# Poetry
+#
+
+[tool.poetry]
+name = "jetfusion"
+version = "0.1.0"
+description = "JetFusion API"
+authors = ["pythops <contact@pythops.com>"]
+license = "AGPLv3"
+
+[tool.poetry.dependencies]
+python = ">=3.8 <3.9"
+fastapi = "^0.103"
+uvicorn = "^0.23"
+torch = { url = "https://developer.download.nvidia.cn/compute/redist/jp/v511/pytorch/torch-2.0.0+nv23.05-cp38-cp38-linux_aarch64.whl" }
+diffusers = "^0.24.0"
+transformers = "^4.36.1"
+accelerate = "^0.25.0"
+slowapi = "^0.1.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
