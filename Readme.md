@@ -102,7 +102,7 @@ DIFFUSION_MODEL_DIR="$HOME/diffusion/sd-turbo" poetry run uvicorn --host 0.0.0.0
 
 To display images in your terminal, you'll need to install [img2sixel](https://github.com/saitoha/libsixel)
 
-ℹ Your terminal should support the sixel graphics format, check here for more infos https://www.arewesixelyet.com/
+Your terminal should support the sixel graphics format, check here for more infos https://www.arewesixelyet.com/
 
 ### Using curl
 
