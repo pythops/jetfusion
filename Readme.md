@@ -7,18 +7,6 @@ Easy deploy of diffusion models on Nvidia jetson boards.
 - Nvidia Jetson board with at least 8GB of Memory.
 - At least 25GB free space on the disk.
 
-## 📸 Demo
-
-Here is a free and public instance:
-
-```
-https://jetfusion.pythops.com
-```
-
-**model**: [sd-turbo](https://huggingface.co/stabilityai/sd-turbo) from StabilityAI
-
-**limit**: 5 requests per minute
-
 ## 🛠️ Setup
 
 1. Download and install the minamilist image for your board [here🔗](https://github.com/pythops/jetson-image)
@@ -107,7 +95,7 @@ Your terminal should support the sixel graphics format, check here for more info
 ### Using curl
 
 ```
-curl -s https://jetfusion.pythops.com/generate \
+curl -s https://localhost:8000/generate \
     -H "Content-Type: application/json" \
     -d '{"prompt": "Colorful fish in the coral reef"}' | img2sixel
 ```
@@ -115,7 +103,7 @@ curl -s https://jetfusion.pythops.com/generate \
 ### Using httpie
 
 ```
-http https://jetfusion.pythops.com/generate \
+http https://localhost:8000/generate \
 prompt="Colorful fish in the coral reef" | img2sixel
 ```
 
